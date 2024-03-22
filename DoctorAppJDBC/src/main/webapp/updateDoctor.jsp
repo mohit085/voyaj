@@ -4,42 +4,45 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Update Doctor</title>
 </head>
 <body>
-	<h1>Updating the Doctor</h1>
+	<div>
+		<h1>getting  the Doctor record</h1>
+		<a href="index.jsp"><button>go back to home page</button></a>
+	</div>
+	<br>
 	<fieldset>
 		<legend align="center">Update Doctor</legend>
 			<form action="updateServlet" method="post">
 				<table align="left" border="2">
 					<tr>
 						<td>Enter DoctorId</td>
-						<td><input type="number" name="doctorId"></td>
+						<td><input type="number" name="doctorId" placeholder="enter the doctor id" value="${doctor.doctorId }" readonly></td>
+					</tr>
+					<tr>
+						<td>Enter DocorName</td>
+						<td><input type="text" name="doctorName" placeholder="enter the doctor name" value="${doctor.doctorName }" readonly></td>
 					</tr>
 					<tr>
 					<td>Enter Speciality</td>
 						<td>
-							<select name="speciality">
-								<option value="ORTHO">ORTHOPEDIC</option>
-								<option value="PEDIA">PEDIATRICIAN</option>
-								<option value="PHYSICIAN">GENERAL PHYSICIAN</option>
-								<option value="GYNAEC">ORTHOPEDIC</option>
-								<option value="NEURO">NEUROLOGIST</option>
-								<option value="DERMA">DERMATOLOGIST</option>
+							<select name="speciality" readonly>
+								<option>${doctor.speciality }</option>
 							</select>
 						</td>
 						</tr>
 						<tr>
 							<td>Enter Consultation  fees</td>
-							<td><input type="number" name="fees" placeholder="Enter Consultation fees"></td>
+							<td><input type="number" name="fees" placeholder="Enter Consultation fees" value="${doctor.cosulationFees }" readonly></td>
 						</tr>
 						<tr>
 							<td>Enter Experience</td>
-							<td><input type="text" name="experience" placeholder="Enter Doctor Experience"></td>
+							<td><input type="text" name="experience" placeholder="Enter Doctor Experience" value="${doctor.experience }"  readonly></td>
 						</tr>
 						<tr>
 							<td>Enter Ratings</td>
-							<td><input type="text" name="ratings" placeholder="Enter Doctor Ratings"></td>
+							<td><input type="text" name="ratings" placeholder="Enter Doctor Ratings" value="${doctor.ratings }" readonly></td>
 						</tr>
 						<tr>
 							<td><input type="submit" value="Submit"></td>

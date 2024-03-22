@@ -4,23 +4,28 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>getting id of doctor</title>
 </head>
 <body>
-	<h1>Edit the Doctor Record</h1>
+	<div>
+		<h1>Getting a Doctor Record</h1>
+		<a href="index.jsp"><button>Go Back to Home Page</button></a>
+	</div>
+	<br>
 	<fieldset>
-		<form action="updateDoctor.jsp" method="post">
-			<table align="left" border="2">
-				<tr>
-					<td>Enter DoctorId</td>
-					<td><input type="number" name="doctorId"></td>
-				</tr>
-				<tr>
-					<td><input type="submit" value="Submit"></td>
-					<td><input type="reset" value="Reset"></td>
-				</tr>
-			</table>
-		</form>
+		<legend align="center">Get Doctor ID</legend>
+			<form action="editServlet" method="post">
+				<table align="left" border="2">
+					<tr>
+						<td>Enter DoctorId</td>
+						<td><input type="number" name="doctorId" placeholder="Enter Doctor ID"></td>
+					</tr>
+					<tr>
+						<td><input type="submit" value="Submit"></td>
+						<td><input type="reset" value="Reset"></td>
+					</tr>
+				</table>
+			</form>
 	</fieldset>
 </body>
 </html>
